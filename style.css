@@ -1,0 +1,158 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@1&display=swap');
+
+*{
+    font-family: 'Poppins', sans-serif;
+}
+.anner-show {
+    position: relative;
+}
+.bg-shadow {
+    z-index: 1;
+    background-color: black;
+    width: 100%;
+    height: 100mm;
+    position: absolute;
+    opacity: .5;
+}
+.img-banners {
+    width: 100%;
+    height: 100mm;
+    object-fit: cover;
+}
+.group-text {
+    position: absolute;
+    z-index: 2;
+    background-color: aqua;
+}
+
+.title {
+    position: absolute;
+    top: 20mm;
+    z-index: 2;
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 600;
+}
+.tagline{
+    position: absolute;
+    top: 35mm;
+    z-index: 2;
+    padding: 12px;
+    border-radius: 12px;
+    color: white;
+    font-weight: 300;
+    width: 70%;
+}
+.row-btn {
+   position: absolute;
+    top: 60mm;
+    z-index: 2;
+    flex-direction: row;
+    gap: 12px;
+    display: flex;
+    flex: 1;
+}
+.btn-planing {
+    background-color: #E55604;
+    color: white;
+    width: 70mm;
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+}
+.btn-menu {
+    background-color: white;
+    color: black;
+    width: 70mm;
+    padding: 12px;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    font-weight: 600;
+}
+.group-menu-text {
+    margin-block-start: 50px;}
+    .title-menu {
+        font-weight: 600;
+        color: black;
+        font-size: 50px;
+        text-transform: capitalize;
+        text-decoration: none;
+    }
+    .desk-menu {
+        color: black;
+        font-weight: 300;
+    }
+
+.row-cards {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px; 
+    margin-block: 80px;
+}
+.card-informal {
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding: 100px
+}
+.img-tentang {
+    border-radius: 20px;
+    animation: naikTurun 2s ease-in-out infinite;
+}
+.title-about {
+    font-weight: 600;
+}
+.desk-about {
+    margin-top: 30px;
+    font-weight: 300;
+    font-size: 15px;
+}
+.mobile-container {
+    display: none;
+}
+
+/* animation */
+@keyframes naikTurun {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        display: none;
+    }
+    .img-banners {
+        display: none;
+    }
+    .banner-show {
+        display: none;
+    }
+    .img-tentang {
+        display: none;
+    }
+    .mobile-container {
+        display: block;
+    }
+    .title-mobile {
+        text-align: center;
+        font-weight: 600;
+        animation: naikTurun 2s ease-in-out infinite;
+    }
+    @keyframes naikTurun {
+        0%, 100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-10px);
+        }
+    }
+}

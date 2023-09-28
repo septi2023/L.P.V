@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Menu L. P. V</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+</head>
+<body>
+
+    <div class="banner-show">
+        <div class="bg-shadow".></div>
+        <img src="https://africanmangosupreme.com/wp-content/uploads/2019/03/97bf1ebf96018b8d980e7e2a96a47d65.jpeg" alt="img-banner" class="img-banners">
+        <div class="container">
+            <h1 class="title">Seafood L. P. V - La Playa Veinticuatro</h1>
+            <p class="tagline">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit, rerum consectetur possimus voluptates ab ratione unde ipsum soluta. At minus consequuntur dolores, id numquam in error ducimus laborum rerum reiciendis.</p>
+            <div class="row-btn">
+                <button type="button" class="btn-planing" onclick="downloadFile()" >Planing</button>
+                <button type="button" class="btn-menu" onclick="redirectToMenu()" >Beranda</button>
+            </div>
+        </div>
+    </div>
+    <div class="container" style="margin-block: 40px;" >
+        <div class="input-group mb-3">
+            <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" id="searchInput">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="button" onclick="searchMenu()">Search</button>
+            </div>
+        </div>
+    </div>
+    <div class="container"  >
+        <div class="group-menu-text">
+            <h1 class="title-menu">Menu Makanan Seafood</h1>
+            <p class="desk-menu">Harga ekonomis bagi mahasiswa dan masyarakat</p>
+        </div>
+        <div class="row-cards">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2020/03/Resep-Kerang-Hijau-Rebus.jpg?fit=1534%2C1500&ssl=1" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Kerang Hijau Bumbu Kuning.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://www.resepkuerenyah.com/wp-content/uploads/2021/09/cara-membuat-kepiting-saus-tiram.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Kepiting Saus Tiram.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://i.pinimg.com/originals/2e/aa/94/2eaa947439abb8edce03669cff869fe2.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Ikan Bakar .</p>
+                </div>
+            </div>
+        </div>
+        <div class="row-cards">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://i.pinimg.com/originals/d7/11/88/d711882553bfbf8475a7fb6d8a4c9534.jpg" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Cumi Saus Tiram.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://awsimages.detik.net.id/community/media/visual/2019/12/03/2f35dec8-8c1b-4a95-8ea7-b7038292da2e.jpeg?w=724" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Pecak Kangkung.</p>
+                </div>
+            </div>
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="https://th.bing.com/th/id/OIP.dli_PIB3Im6UB0WwBXQUCgHaE7?pid=ImgDet&rs=1" alt="Card image cap">
+                <div class="card-body">
+                    <p class="card-text">Udang Saus Tiram.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="mobile-container">
+        <h1 class="title-mobile">Maaf, website ini hanya dapat diakses melalui laptop.</h1>
+    </div>
+
+<script>
+    function searchMenu() {
+        var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        var cards = document.querySelectorAll(".card");
+
+        cards.forEach(function (card) {
+            var menuTitle = card.querySelector(".card-text").textContent.toLowerCase();
+
+            if (menuTitle.includes(searchTerm)) {
+                card.style.display = "block";
+            } else {
+                card.style.display = "none";
+            }
+        });
+    }
+    if (window.innerWidth < 768) {
+            window.location.href = 'mobile-not-supported.html';
+            alert('Maaf, website ini hanya dapat diakses melalui laptop.');
+        }
+
+        function redirectToMenu() {
+            window.location.href = 'index.html';
+        }
+
+        function downloadFile() {
+            // URL file yang akan diunduh
+            var fileUrl = 'https://drive.google.com/file/d/1h64_LAt0An0VtfIfw5QlFyeYh7MNpeG8/view?usp=sharing';
+            
+            // Nama file yang akan digunakan saat diunduh
+            var fileName = 'file.pdf';
+
+            // Buat sebuah elemen <a> untuk tautan unduhan
+            var link = document.createElement('a');
+            link.href = fileUrl;
+            link.download = fileName;
+
+            // Klik otomatis tautan unduhan
+            link.click();
+        }
+</script>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
