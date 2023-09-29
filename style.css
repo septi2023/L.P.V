@@ -51,7 +51,6 @@
     flex-direction: row;
     gap: 12px;
     display: flex;
-    flex: 1;
     margin-block: 30px;
 }
 .btn-planing {
@@ -170,32 +169,138 @@
 }
 
 @media (max-width: 768px) {
-    .container {
+    .card-nav-brand {
         display: none;
+    }
+    .bg-shadow {
+        z-index: 1;
+        background-color: black;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        opacity: .5;
     }
     .img-banners {
-        display: none;
+        width: 100%;
+        height: 100vh;
+        object-fit: cover;
     }
-    .banner-show {
-        display: none;
+    .title {
+        position: absolute;
+        top: 20mm;
+        z-index: 2;
+        padding: 12px;
+        border-radius: 12px;
+        color: white;
+        font-weight: 600;
+        font-size: large;
+    }
+    .tagline {
+        position: absolute;
+        top: 40mm;
+        z-index: 2;
+        padding: 12px;
+        border-radius: 12px;
+        color: white;
+        font-weight: 300;
+        width: 100%;
+        font-size: small;
+    }
+    .row-btn {
+        position: absolute;
+        top: 80mm;
+        z-index: 2;
+        flex-direction: column;        
+        display: flex; 
+        width: fit-content;        ;    
+    }
+    .btn-planing {
+        background-color: #E55604;
+        color: white;        
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+    .btn-menu {
+        background-color: white;
+        color: black;        
+        padding: 10px;
+        outline: none;
+        border: none;
+        border-radius: 12px;
+        font-weight: 600;
+    }
+    .card-informal {
+        width: 100%;        
+        flex-direction: column;        
+        position: relative;        
+        height: 70vh;
     }
     .img-tentang {
-        display: none;
-    }
-    .mobile-container {
-        display: block;
-    }
-    .title-mobile {
-        text-align: center;
-        font-weight: 600;
+        position: absolute;
+        border-radius: 20px;
+        width: fit-content;
+        height: 40%;
         animation: naikTurun 2s ease-in-out infinite;
+        left: 20px;
+        top: 20em;
     }
-    @keyframes naikTurun {
-        0%, 100% {
-            transform: translateY(0);
-        }
-        50% {
-            transform: translateY(-10px);
-        }
+    .title-about {        
+        font-weight: 600;        
+        font-size: 30px;                
+        position: absolute;
+        font-size: large;
+        left: 20px;
+        top: 50px;
+        width: fit-content;
+
     }
+    .desk-about {
+        position: absolute;
+        margin-top: 10px;
+        font-weight: 300;
+        font-size: small;
+        left: 20px;
+        width: fit-content;
+    }
+    .group-menu-text {
+        margin-block-start: 50px;
+        margin-inline: 12px;
+    }
+        .title-menu {
+            font-weight: 600;
+            color: black;
+            font-size: large;
+            text-transform: capitalize;
+            text-decoration: none;
+        }
+        .desk-menu {
+            color: black;
+            font-weight: 300;
+            font-size: small;
+        }
+
+        .row-cards {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;             
+            align-items: center;            
+        }
+
+        .title-pemesanan {
+            font-size: small;
+            font-weight: 300;
+            color: white;
+            margin-right: 20px;
+        }
+        .dsk-pemesanan{
+            font-weight: 600;
+            color: #25D366;
+            font-size: small;
+        }
+        .img-was {
+            max-width: 100px;
+        }
 }
