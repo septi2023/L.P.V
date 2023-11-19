@@ -3,32 +3,48 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- title : ini berfungsi untuk memberikan nama website -->
     <title>L.P.V</title>
+    <!-- ini berfungsi untuk menyambungkan antara html ke css untuk mempercantik tampilan -->
     <link rel="stylesheet" href="style.css">
+    <!-- ini berfungsi sebagai CDN styleing pada bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   </head>
   <body>
+    <!-- div dengan class banner-show itu sebagai membuat tampilan banner pada website L.P.V -->
     <div class="banner-show">
         <div class="bg-shadow".></div>
+        <!-- img ini berfungsi untuk menampilkan latar background pada banner -->
         <img src="https://africanmangosupreme.com/wp-content/uploads/2019/03/97bf1ebf96018b8d980e7e2a96a47d65.jpeg" alt="img-banner" class="img-banners">
         <div class="container">
+            <!-- h1 untuk membuat wording pada website L.P.V -->
             <h1 class="title">Seafood L. P. V - La Playa Veinticuatro</h1>
+            <!-- p untuk memberikan deskripsi pada website L.P.V -->
             <p class="tagline">Seafood adalah kekayaan rasa yang berasal dari lautan yang luas. Di setiap sudut dunia, masakan seafood memiliki identitasnya sendiri, menggabungkan rasa autentik dengan budaya yang unik. Kami mengajak Anda untuk merayakan kekayaan laut melalui beberapa hidangan seafood paling ikonik dari seluruh dunia.</p>
             <div class="row-btn">
-                <button type="button" class="btn-planing" onclick="downloadFile()" >Planing</button>
+                <!-- Pada button planning ini memberikan event click yang dimana event tersebut memanggil fungsi downloadFile() yang nantinya akan mendownload sebuah file.pdf -->
+                <!-- <button type="button" class="btn-planing" onclick="downloadFile()" >Planing</button> -->
+                <!-- pada button Menu ini memberikan event click yang dimana event tersebut memanggil fungsi redirectToMenu() yang nantinya akan berpindah halaman ke halamana menu -->
                 <button type="button" class="btn-menu" onclick="redirectToMenu()" >Menu</button>
             </div>
         </div>
     </div>
+    <!-- selesai class untuk membuat class banner -->
+    <!-- div dengan class card-informasi ini memberikan sebuah informasi tentang website L.P.v -->
     <div class="card-informal">
         <div class="container" >
+            <!-- h1 memberikan wording title untuk L.P.V -->
             <h1 class="title-about">Tentang L. P. V - La Playa Veinticuatro</h1>
+            <!-- p memberikan wording description pada informasi dari website tersebut -->
             <p class="desk-about">
                 Seafood adalah kekayaan rasa yang berasal dari lautan yang luas. Di setiap sudut dunia, masakan seafood memiliki identitasnya sendiri, menggabungkan rasa autentik dengan budaya yang unik. Kami mengajak Anda untuk merayakan kekayaan laut melalui beberapa hidangan seafood paling ikonik dari seluruh dunia.
             </p>
         </div>
+        <!-- img ini untuk menampilkan gambar dari brand L.P.V -->
         <img src="https://th.bing.com/th/id/OIP.jwfvGNPp3rJj03AaB5kbDQEsDI?w=274&h=182&c=7&r=0&o=5&dpr=1.4&pid=1.7" alt="img-tentang" class="img-tentang" >
     </div>
+    <!-- selesai class untuk membuat tampilam informasi website -->
+    <!-- untuk code ini membuat sebuah list menu yang disediakan oleh L.P.V -->
     <div class="container"  >
         <div class="group-menu-text">
             <h1 class="title-menu">Menu Makanan Seafood</h1>
@@ -81,10 +97,13 @@
             </div>
         </div>
     </div>
-    <!-- navbar -->
-    <div class="card-nav-brand">
-        <h2 class="title-brand">Seafood L. P. V - La Playa Veinticuatro</h2>
+    <!-- selesai untuk membuat tampilan list menu pada L.P.V -->
+
+    <!-- start membuat navbar pada website L.P.V -->
+    <div class="card-nav-brand">        
+        <p style="text-align: center;" ><img src="./logo seafood.png" class="logo-lpv" alt="logo-lpv"></p>
     </div>
+    <!-- end membuat navbar -->
 
     <!-- image wa -->
     <div class="card-nav-wa">
@@ -94,12 +113,16 @@
         </div>
         <img src="https://static.whatsapp.net/rsrc.php/v3/y7/r/DSxOAUB0raA.png" alt="img-wa" class="img-was" >
     </div>
+    <!-- end image wa -->
     
+    <!-- pada code ini untuk membuat script javascript -->
     <script>
+        // pada function ini dijelaskan bawah code ini pada saat event functio ini dipanggil akan dapat berpindah halaman ke menu.html
         function redirectToMenu() {
             window.location.href = 'menu.html';
         }
 
+        // pada function downloadFile ini dijelaskan bahwa code ini memfungsikan untukk mendowload file dari google drive yang nantinya pada saat di download nama filenya yaitu : file.pdf
         function downloadFile() {
             // URL file yang akan diunduh
             var fileUrl = 'https://drive.google.com/file/d/1h64_LAt0An0VtfIfw5QlFyeYh7MNpeG8/view?usp=sharing';
@@ -116,6 +139,7 @@
             link.click();
         }
     </script>
+    <!-- script ini bawaan dari CDN bootstrap yang sudah otomatis terkoneksi ke bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
   </body>
 </html>

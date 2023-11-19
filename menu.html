@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+        <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -9,6 +9,7 @@
 </head>
 <body>
 
+    <!-- penjelasannya sama dengan di file index.html -->
     <div class="banner-show">
         <div class="bg-shadow".></div>
         <img src="https://africanmangosupreme.com/wp-content/uploads/2019/03/97bf1ebf96018b8d980e7e2a96a47d65.jpeg" alt="img-banner" class="img-banners">
@@ -16,24 +17,29 @@
             <h1 class="title">Seafood L. P. V - La Playa Veinticuatro</h1>
             <p class="tagline">Seafood adalah kekayaan rasa yang berasal dari lautan yang luas. Di setiap sudut dunia, masakan seafood memiliki identitasnya sendiri, menggabungkan rasa autentik dengan budaya yang unik. Kami mengajak Anda untuk merayakan kekayaan laut melalui beberapa hidangan seafood paling ikonik dari seluruh dunia.</p>
             <div class="row-btn">
-                <button type="button" class="btn-planing" onclick="downloadFile()" >Planing</button>
+                <!-- <button type="button" class="btn-planing" onclick="downloadFile()" >Planing</button> -->
                 <button type="button" class="btn-menu" onclick="redirectToMenu()" >Beranda</button>
             </div>
         </div>
     </div>
+    <!-- end -->
     <div class="container"  >
         <div class="group-menu-text">
             <h1 class="title-menu">Menu Makanan Seafood</h1>
             <p class="desk-menu">Harga ekonomis bagi mahasiswa dan masyarakat</p>
         </div>
+        <!-- pada group ini membuat tampilan inputan untuk mencari menu makanan yang ada di website ini -->
         <div class="container" style="margin-block: 40px;" >
             <div class="input-group mb-3">
+                <!-- ini adalah fungsi untuk melakukan pencarian -->
                 <input type="search" class="form-control" placeholder="Search" aria-label="Search" aria-describedby="basic-addon2" id="searchInput">
                 <div class="input-group-append">
+                    <!-- pada fungsi ini ada sebuah button yang memberikan event click yang memanggil fungsi searchMenu() yang dimana nantinya akan melakaukan pencarian pada saat kita menekan tombol Searh ini -->
                     <button class="btn btn-outline-secondary" type="button" onclick="searchMenu()">Search</button>
                 </div>
             </div>
         </div>
+        <!-- ini adalah list menu makanan yang ada di website ini yang dapat bisa dicari agar mempermudah menumkan menu makanannya -->
         <div class="row-cards">
             <div class="card" style="width: 18rem;">
                 <img class="card-img-top" src="https://i0.wp.com/resepkoki.id/wp-content/uploads/2020/03/Resep-Kerang-Hijau-Rebus.jpg?fit=1534%2C1500&ssl=1" alt="Card image cap">
@@ -81,10 +87,14 @@
             </div>
         </div>
     </div>
+    <!-- end -->
 
+    <!-- ini untuk membuat tampilan navbar pada website -->
     <div class="card-nav-brand">
-        <h2 class="title-brand">Seafood L. P. V - La Playa Veinticuatro</h2>
+        
+        <p style="text-align: center;" ><img src="./logo seafood.png" class="logo-lpv" alt="logo-lpv"></p>
     </div>
+    <!-- end -->
 
     <div class="card-nav-wa">
         <div style="display: flex; text-align: center; align-items: center; justify-content: center;" >
@@ -99,14 +109,21 @@
     </div>
 
 <script>
+    // pada fungsi ini jika diliat yaitu untuk melakukan pencarian pada menu makanan yang ada di L.P.V
     function searchMenu() {
+        // pada variable ini berfungsi untuk mengambil document searchInput yang valuenya akan dijadikan menjadi huruf kecil pada saat melakukan pencarian
         var searchTerm = document.getElementById("searchInput").value.toLowerCase();
+        // pada variable ini untuk menglist yang berisi semua element dengan class cards
         var cards = document.querySelectorAll(".card");
+        
 
         cards.forEach(function (card) {
-            var menuTitle = card.querySelector(".card-text").textContent.toLowerCase();
 
-            if (menuTitle.includes(searchTerm)) {
+            // pada variable ini berfungsi untuk mengambil teks dari elemnt card-text dan mengubah valuenya menjadi huruf kecil
+            var menuTitle = card.querySelector(".card-text").textContent.toLowerCase();
+        
+            // pada logic ini jika datanya itu sama / ada maka display style nya itu block yang berarti muncul datanya dan jika mislkan data yang di inputkan tidak ada maka style card displaynya itu none yang beratti hilang
+        if (menuTitle.includes(searchTerm)) {
                 card.style.display = "block";
             } else {
                 card.style.display = "none";
